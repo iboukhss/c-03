@@ -3,24 +3,27 @@
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	while (*s1 == *s2 && n > 0)
+	unsigned int	i;
+
+	i = 1;
+	while (*s1 == *s2 && i < n && *s1)
 	{
-		printf("s1: %c\ns2: %c\n", *s1, *s2);
+		printf("s1: %c %p\ns2: %c %p\n", *s1, s1, *s2, s2);
 		++s1;
 		++s2;
-		--n;
+		++i;
 	}
 	printf("\ns1: %d\ns2: %d\n", *s1, *s2);
-	return(*s1 - *s2);
+	return (*s1 - *s2);
 }
 
 int	main(void)
 {
-	char	*hello = "ABC";
+	char	*hello = "ABBV";
 	char	*salut = "AB";
-	int k = 2;
+	unsigned int k = 2;
 	int	ret1;
-	int ret2;
+	int	ret2;
 
 	ret1 = strncmp(hello, salut, k);
 	ret2 = ft_strncmp(hello, salut, k);
