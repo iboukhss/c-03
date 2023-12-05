@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
@@ -8,20 +5,21 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	i = 1;
 	while (*s1 == *s2 && i < n && *s1)
 	{
-		printf("s1: %c %p\ns2: %c %p\n", *s1, s1, *s2, s2);
 		++s1;
 		++s2;
 		++i;
 	}
-	printf("\ns1: %d\ns2: %d\n", *s1, *s2);
 	return (*s1 - *s2);
 }
 
+#include <stdio.h>
+#include <string.h>
+
 int	main(void)
 {
-	char	*hello = "ABBV";
-	char	*salut = "AB";
-	unsigned int k = 2;
+	char	*hello = "";
+	char	*salut = "";
+	unsigned int k = 6;
 	int	ret1;
 	int	ret2;
 
