@@ -6,9 +6,11 @@
 /*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 16:30:13 by iboukhss          #+#    #+#             */
-/*   Updated: 2023/12/06 17:15:39 by iboukhss         ###   ########.fr       */
+/*   Updated: 2023/12/11 00:20:59 by iboukhss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* strncat(3): the size of dest must be at least strlen(dest)+n+1 */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
@@ -37,15 +39,15 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 
 int	main(void)
 {
-	char	*str = "xdd";
-	char	d1[10] = "hehe";
-	char	d2[10] = "hehe";
+	char	str[3] = {'1', '2'};
+	char	d1[10] = "test";
+	char	d2[10] = "test";
 	char	*ret;
 	char	*ret2;
 
-	ret = ft_strncat(d1, str, 2);
+	ret = ft_strncat(d1, str, 3);
 	printf("ft_strncat: %s\n", ret);
 
-	ret2 = strncat(d2, str, 2);
-	printf("strncat: %s\n", ret2);
+	ret2 = strncat(d2, str, 3);
+	printf("strncat:    %s\n", ret2);
 }
