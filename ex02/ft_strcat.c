@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iboukhss <iboukhss@student.42luxe...>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/14 14:10:46 by iboukhss          #+#    #+#             */
+/*   Updated: 2023/12/14 14:10:48 by iboukhss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 char	*ft_strcat(char *dest, char *src)
 {
 	char	*tmp;
@@ -17,7 +29,7 @@ char	*ft_strcat(char *dest, char *src)
 	return (tmp);
 }
 
-
+/*
 #include <string.h>
 #include <stdio.h>
 
@@ -27,21 +39,11 @@ int	main(void)
 	char	s2[11] = {'h', 'e', 'l', 'l', 'o'};
 	char	*str = "world";
 	char	*ret;
-	int		n = 12;
 
-	printf("before: %s\n", s1);
+	ret = strcat(s1, str);
+	printf("strcat: %s %p\n", ret, ret);
 
-	for (int x = 0; x < n; ++x)
-		printf("%c %p\n", s1[x], &s1[x]);
-
-	ret = ft_strcat(s1, str);
-
-	printf("\nafter:  %s\n", s1);
-	for (int x = 0; x < n; ++x)
-		printf("%c %p\n", s1[x], &s1[x]);
-
-	printf("ft_strcat: %s\n", ret);
-
-	ret = strcat(s2, str);
-	printf("strcat: %s\n", ret);
+	ret = ft_strcat(s2, str);
+	printf("ft_strcat: %s %p\n", ret, ret);
 }
+*/
